@@ -117,7 +117,7 @@ button:hover {
 />
 
 <p id="story">
-It’s your birthday bananza! Let's celebrate in Brooklyn. 
+It’s your birthday! Let's celebrate in Brooklyn. 
 Nub has summoned you for a legendary quest.
 First mission: Fuel up for the day! Choose your snack.
 </p>
@@ -139,8 +139,8 @@ function catClick() {
   if (catClicks === 5) {
     document.getElementById("story").innerHTML =
       "<span class='secret'>SECRET NUBCAT DIMENSION UNLOCKED.</span><br><br>" +
-      "The Nubcats of Brooklyn declare:<br><br>" +
-      "Manan has unlocked Infinite Birthday Luck 🐾💙<br><br>" +
+      "Nub declares:<br><br>" +
+      "Manan has unlocked Infinite Birthday Luck ₍^ >⩊< ^₎Ⳋ<br><br>" +
       "Bonus Life Activated.";
     document.getElementById("choices").innerHTML =
       "<button onclick='restart()'>Return to Quest</button>";
@@ -196,12 +196,12 @@ function teleport() {
 
 function bossLevel() {
   document.getElementById("story").innerHTML =
-    "👑 GIRLFRIEND BOSS LEVEL 👑<br><br>" +
+    "ᯓ★GIRLFRIEND BOSS LEVELᯓ★<br><br>" +
     "Abigail appears glowing with birthday energy.<br><br>" +
     "Who planned this entire legendary day?";
   document.getElementById("choices").innerHTML =
-    "<button onclick='bossWin()'>Abigail the Icon</button>" +
-    "<button onclick='bossLose()'>The Nubcats</button>";
+    "<button onclick='bossWin()'>The Love of Your Life</button>" +
+    "<button onclick='bossLose()'>Nub</button>";
 }
 
 function bossLose() {
@@ -261,7 +261,7 @@ function finale() {
   document.getElementById("story").innerHTML =
     "<div class='cake'>⋆｡‧˚ʚ ୨ৎ ɞ˚‧｡⋆</div><br>" +
     "Happy Birthday Manan.<br><br>" +
-    "I cant't wait to travel the world with you!,<br>" +
+    "I cant't wait to travel the world with you!<br>" +
     "Today, let's start in Brooklyn.<br><br>" +
     "There's no one else I'd rather adventure with,<br>" +
     "hand in hand.<br><br>" +
