@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Manan's Birthday Bananza</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(#081c3a, #123a7a);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* PIXEL BROOKLYN SKYLINE */
+.skyline {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background:
+    linear-gradient(to top, #0d2a5e 40%, transparent 40%),
+    repeating-linear-gradient(
+      to right,
+      #0d2a5e 0px,
+      #0d2a5e 20px,
+      #123a7a 20px,
+      #123a7a 40px
+    );
+  z-index: -1;
+}
+
+.container {
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+}
+
+h1 {
+  color: #7ec8ff;
+  text-shadow: 3px 3px #001f3f;
+}
+
+/* NUBCAT IMAGE */
+#nubcat {
+  width: 110px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+  image-rendering: pixelated;
+}
+
+@keyframes bounce {
+  50% { transform: translateY(-10px); }
+}
+
+button {
+  display: block;
+  margin: 15px auto;
+  padding: 12px 20px;
+  background: #1e5bb8;
+  border: 3px solid #7ec8ff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #2f7bff;
+  transform: scale(1.05);
+}
+
+/* CONFETTI GIF */
+.confetti {
+  position: fixed;
+  top: -120px;
+  width: 90px;
+  pointer-events: none;
+  animation: fall 4s linear forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(120vh); }
+}
+
+.cake {
+  font-size: 70px;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #7ec8ff; }
+  to { text-shadow: 0 0 30px white; }
+}
+
+.secret {
+  color: #00ffcc;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="skyline"></div>
+
+<div class="container">
+<h1>🎉 Manan's Birthday Bananza 🎉</h1>
+
+<!-- NUBCAT -->
+<img 
+  src="https://nubcat.xyz/_next/static/media/mascot.8cb4fc3c.png"
+  id="nubcat"
+  alt="Nubcat Mascot"
+  onclick="catClick()"
+/>
+
+<p id="story">
+Brooklyn, NYC. It’s your birthday.
+The Nubcats have summoned you for a legendary quest.
+First mission: Choose your snack.
+</p>
+
+<div id="choices">
+<button onclick="nenes()">Nenes Deli Taqueria 🇲🇽</button>
+<button onclick="apous()">A-Pou's Taste 🇹🇼</button>
+</div>
+
+</div>
+
+<script>
+
+let catClicks = 0;
+
+/* SECRET CAT ENDING */
+function catClick() {
+  catClicks++;
+  if (catClicks === 5) {
+    document.getElementById("story").innerHTML =
+      "<span class='secret'>SECRET NUBCAT DIMENSION UNLOCKED.</span><br><br>" +
+      "The Nubcats of Brooklyn declare:<br><br>" +
+      "Manan has unlocked Infinite Birthday Luck 🐾💙<br><br>" +
+      "Bonus Life Activated.";
+    document.getElementById("choices").innerHTML =
+      "<button onclick='restart()'>Return to Quest</button>";
+  }
+}
+
+/* QUEST PATHS */
+
+function nenes() {
+  document.getElementById("story").innerHTML =
+    "You chose Nenes 🇲🇽.<br><br>" +
+    "A radioactive coffee cup appears ☢️.<br><br>" +
+    "Dead end. The Nubcats disapprove.";
+  document.getElementById("choices").innerHTML =
+    "<button onclick='restart()'>Restart Morning</button>";
+}
+
+function apous() {
+  document.getElementById("story").innerHTML =
+    "A-Pou's Taste 🇹🇼 fuels you with birthday power.<br><br>" +
+    "A portal opens to Driftaway Coffee ☕.";
+  document.getElementById("choices").innerHTML =
+    "<button onclick='driftaway()'>Go to Driftaway</button>";
+}
+
+function driftaway() {
+  document.getElementById("story").innerHTML =
+    "Caffeine Level: MAX.<br><br>" +
+    "Next mission: Reach Xanadu Roller Arts.";
+  document.getElementById("choices").innerHTML =
+    "<button onclick='rollFail()'>Rollerskate There</button>" +
+    "<button onclick='teleport()'>Teleport Dramatically</button>";
+}
+
+function rollFail() {
+  document.getElementById("story").innerHTML =
+    "You attempt to rollerskate through Brooklyn traffic.<br><br>" +
+    "A pigeon defeats you.<br><br>" +
+    "Try a smarter method.";
+  document.getElementById("choices").innerHTML =
+    "<button onclick='driftaway()'>Choose Again</button>";
+}
+
+function teleport() {
+  document.getElementById("story").innerHTML =
+    "You teleport in blue sparkles ✨<br><br>" +
+    "You arrive flawlessly at Xanadu Roller Arts.";
+  document.getElementById("choices").innerHTML =
+    "<button onclick='bossLevel()'>Enter Girlfriend Boss Level</button>";
+}
+
+/* GIRLFRIEND BOSS LEVEL */
+
+function bossLevel() {
+  document.getElementById("story").innerHTML =
+    "👑 GIRLFRIEND BOSS LEVEL 👑<br><br>" +
+    "Abigail appears glowing with birthday energy.<br><br>" +
+    "Who planned this entire legendary day?";
+  document.getElementById("choices").innerHTML =
+    "<button onclick='bossWin()'>Abigail the Icon</button>" +
+    "<button onclick='bossLose()'>The Nubcats</button>";
+}
+
+function bossLose() {
+  document.getElementById("story").innerHTML =
+    "Incorrect. The Girlfriend Boss grows stronger.<br><br>Try again.";
+  document.getElementById("choices").innerHTML =
+    "<button onclick='bossLevel()'>Retry</button>";
+}
+
+function bossWin() {
+  document.getElementById("story").innerHTML =
+    "Correct.<br><br>" +
+    "You have defeated the Girlfriend Boss (she let you win).<br><br>" +
+    "Dinner awaits.";
+  document.getElementById("choices").innerHTML =
+    "<button onclick='dinner()'>Proceed to Dinner</button>";
+}
+
+function dinner() {
+  document.getElementById("story").innerHTML =
+    "Final Quest: Choose Your Dinner Destination.";
+  document.getElementById("choices").innerHTML =
+    "<button onclick='tabare()'>Tabare Williamsburg 🇺🇾</button>" +
+    "<button onclick='fandi()'>Fandi Mata 🇮🇹</button>";
+}
+
+function tabare() {
+  document.getElementById("story").innerHTML =
+    "Lovely choice 🇺🇾…<br><br>" +
+    "But tonight destiny whispers Italy.";
+  document.getElementById("choices").innerHTML =
+    "<button onclick='dinner()'>Choose Again</button>";
+}
+
+function fandi() {
+  document.getElementById("story").innerHTML =
+    "Fandi Mata 🇮🇹 selected.<br><br>" +
+    "Victory achieved.";
+  document.getElementById("choices").innerHTML =
+    "<button onclick='finale()'>Reveal Birthday Cake</button>";
+}
+
+/* FINAL SCREEN WITH CONFETTI GIFS */
+
+function finale() {
+
+  const confettiURL = "https://i.pinimg.com/originals/76/87/f4/7687f41886b35677b63ccfb579d8c516.gif";
+
+  for (let i = 0; i < 20; i++) {
+    let confetti = document.createElement("img");
+    confetti.src = confettiURL;
+    confetti.className = "confetti";
+    confetti.style.left = Math.random() * 100 + "%";
+    document.body.appendChild(confetti);
+  }
+
+  document.getElementById("story").innerHTML =
+    "<div class='cake'>🎂</div><br>" +
+    "Happy Birthday Manan.<br><br>" +
+    "From Brooklyn adventures to Taiwan 🇹🇼 and Italy 🇮🇹,<br>" +
+    "I can't wait to explore the world with you.<br><br>" +
+    "You are my favorite person, my adventure partner,<br>" +
+    "and my greatest plot twist.<br><br>" +
+    "Love,<br>Abigail 💙";
+
+  document.getElementById("choices").innerHTML =
+    "<button onclick='restart()'>Play Again</button>";
+}
+
+function restart() {
+  location.reload();
+}
+
+</script>
+
+</body>
+</html>
