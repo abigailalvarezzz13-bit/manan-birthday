@@ -123,8 +123,8 @@ First mission: Fuel up for the day! Choose your snack.
 </p>
 
 <div id="choices">
-<button onclick="nenes()">Nenes Deli Taqueria 🇲🇽</button>
-<button onclick="apous()">A-Pou's Taste 🇹🇼</button>
+<button onclick="nenes()">Maybe some Mexican cuisine?</button>
+<button onclick="apous()">What about some Taiwanese food?</button>
 </div>
 
 </div>
@@ -151,19 +151,19 @@ function catClick() {
 
 function nenes() {
   document.getElementById("story").innerHTML =
-    "You chose Nenes 🇲🇽.<br><br>" +
-    "A radioactive coffee cup appears ☢️.<br><br>" +
-    "Dead end. The Nubcats disapprove.";
+    "You chose Nenes Deli Taqueria 🇲🇽.<br><br>" +
+    "Tasty food, but a longer journey! .<br><br>" +
+    "Hmm...how hungry are you? Maybe explore another option.";
   document.getElementById("choices").innerHTML =
     "<button onclick='restart()'>Restart Morning</button>";
 }
 
 function apous() {
   document.getElementById("story").innerHTML =
-    "A-Pou's Taste 🇹🇼 fuels you with birthday power.<br><br>" +
-    "A portal opens to Driftaway Coffee ☕.";
+    "Nice A-Pou's Taste 🇹🇼 fuels you with birthday power!<br><br>" +
+    "A portal opens to your next destination.";
   document.getElementById("choices").innerHTML =
-    "<button onclick='driftaway()'>Go to Driftaway</button>";
+    "<button onclick='driftaway()'>Let's go!</button>";
 }
 
 function driftaway() {
@@ -198,7 +198,7 @@ function bossLevel() {
   document.getElementById("story").innerHTML =
     "ᯓ★GIRLFRIEND BOSS LEVELᯓ★<br><br>" +
     "Abigail appears glowing with birthday energy.<br><br>" +
-    "Who planned this entire legendary day?";
+    "Who planned this legendary day?";
   document.getElementById("choices").innerHTML =
     "<button onclick='bossWin()'>The Love of Your Life</button>" +
     "<button onclick='bossLose()'>Nub</button>";
@@ -230,16 +230,16 @@ function dinner() {
 
 function tabare() {
   document.getElementById("story").innerHTML =
-    "Lovely choice 🇺🇾…<br><br>" +
-    "But tonight destiny whispers Italy.";
+    "Delicious! Let's try some flavors from Uruguay.<br><br>" +
+    "Ready to eat by candlelight?";
   document.getElementById("choices").innerHTML =
     "<button onclick='dinner()'>Choose Again</button>";
 }
 
 function fandi() {
   document.getElementById("story").innerHTML =
-    "Fandi Mata 🇮🇹 selected.<br><br>" +
-    "Victory achieved.";
+    "Hmm...maybe next time!.<br><br>" +
+    "Until our next adventure!";
   document.getElementById("choices").innerHTML =
     "<button onclick='finale()'>Reveal Birthday Cake</button>";
 }
