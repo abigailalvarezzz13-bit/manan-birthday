@@ -188,14 +188,27 @@ function apous() {
     "<button onclick='driftaway()'>Let's go!</button>";
 
 }
-
-function driftaway() {
+  
+function energyLow() {
   document.getElementById("story").innerHTML =
+    "Our energy bar is looking a little low.<br><br>" +
+    "Let's boost that birthday spirit with our next quest ⚡✨";
+
+  document.getElementById("choices").innerHTML =
+    "<button onclick='driftaway()'>Boost Energy</button>";
+
+} 
+  
+  function driftaway() {
+  document.getElementById("story").innerHTML =
+    "Welcome to Driftaway Cafe ☕✨<br><br>" +
+    "<a href='https://www.driftaway.coffee/' target='_blank'>View the Menu ☕</a><br><br>" +
     "Caffeine Level: MAX.<br><br>" +
     "Next mission: Reach Xanadu Roller Arts.";
   document.getElementById("choices").innerHTML =
     "<button onclick='rollFail()'>Rollerskate There</button>" +
     "<button onclick='teleport()'>Teleport Dramatically</button>";
+    
 }
 
 function rollFail() {
