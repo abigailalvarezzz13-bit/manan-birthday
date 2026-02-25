@@ -152,18 +152,23 @@ function catClick() {
 function nenes() {
   document.getElementById("story").innerHTML =
     "You chose Nenes Deli Taqueria 🇲🇽.<br><br>" +
-    "Tasty food, but a longer journey! .<br><br>" +
-    "Hmm...how hungry are you? Maybe explore another option.";
+    "Tasty food, but a longer journey!<br><br>" +
+    "<a href='https://nenestaqueriausa.com/' target='_blank'>View the Menu 🌮</a><br><br>" +
+    "Hmm... how hungry are you? Maybe explore another option.";
+
   document.getElementById("choices").innerHTML =
     "<button onclick='restart()'>Restart Morning</button>";
 }
 
 function apous() {
   document.getElementById("story").innerHTML =
-    "Nice A-Pou's Taste 🇹🇼 fuels you with birthday power!<br><br>" +
+    "Nice! A-Pou's Taste 🇹🇼 fuels you with birthday power!<br><br>" +
+    "<a href='https://www.apoustasteny.com/crsbdhd1/restaurant/order-online?menu=All+Day+Menu&category=Main+Menu' target='_blank'>View the Menu 🥟</a><br><br>" +
     "A portal opens to your next destination.";
+
   document.getElementById("choices").innerHTML =
     "<button onclick='driftaway()'>Let's go!</button>";
+
 }
 
 function driftaway() {
@@ -181,7 +186,7 @@ function rollFail() {
     "A pigeon defeats you.<br><br>" +
     "Try a smarter method.";
   document.getElementById("choices").innerHTML =
-    "<button onclick='driftaway()'>Choose Again</button>";
+    "<button onclick='bossLevel()'>Enter Girlfriend Boss Level</button>";
 }
 
 function teleport() {
@@ -189,7 +194,7 @@ function teleport() {
     "You teleport in blue sparkles ✨<br><br>" +
     "You arrive flawlessly at Xanadu Roller Arts.";
   document.getElementById("choices").innerHTML =
-    "<button onclick='bossLevel()'>Enter Girlfriend Boss Level</button>";
+    "<button onclick='driftaway()'>Choose Again</button>";
 }
 
 /* GIRLFRIEND BOSS LEVEL */
@@ -224,7 +229,7 @@ function dinner() {
   document.getElementById("story").innerHTML =
     "Final Quest: Choose Your Dinner Destination.";
   document.getElementById("choices").innerHTML =
-    "<button onclick='tabare()'>Tabare Williamsburg 🇺🇾</button>" +
+    "<button onclick='tabare()'>Tabare Bushwick 🇺🇾</button>" +
     "<button onclick='fandi()'>Fandi Mata 🇮🇹</button>";
 }
 
