@@ -141,8 +141,8 @@ First mission: Fuel up for the day! Choose your snack.
 </p>
 
 <div id="choices">
-<button onclick="nenes()">Maybe some Mexican cuisine?</button>
-<button onclick="apous()">What about some Taiwanese food?</button>
+<button onclick="nenes()">Maybe food from a country we'd like to visit?</button>
+<button onclick="apous()">What about food inspired by a scheduled trip?</button>
 </div>
 
 </div>
@@ -171,7 +171,7 @@ function nenes() {
   document.getElementById("story").innerHTML =
     "You chose Nenes Deli Taqueria 🇲🇽.<br><br>" +
     "Tasty food, but a longer journey!<br><br>" +
-    "<a href='https://nenestaqueriausa.com/' target='_blank'>View the Menu 🌮</a><br><br>" +
+    "<a href='https://nenestaqueriausa.com/' target='_blank'>View the Menu⋆˚꩜｡</a><br><br>" +
     "Hmm... how hungry are you? Maybe explore another option.";
 
 document.getElementById("choices").innerHTML = 
@@ -181,7 +181,7 @@ document.getElementById("choices").innerHTML =
 function apous() {
   document.getElementById("story").innerHTML =
     "Nice! A-Pou's Taste 🇹🇼 fuels you with birthday power!<br><br>" +
-    "<a href='https://www.apoustasteny.com/crsbdhd1/restaurant/order-online?menu=All+Day+Menu&category=Main+Menu' target='_blank'>View the Menu 🥟</a><br><br>" +
+    "<a href='https://www.apoustasteny.com/crsbdhd1/restaurant/order-online?menu=All+Day+Menu&category=Main+Menu' target='_blank'>View the Menu⋆˚꩜｡</a><br><br>" +
     "A portal opens to your next destination.";
 
   document.getElementById("choices").innerHTML =
@@ -193,7 +193,7 @@ function apous() {
 function energyLow() {
   document.getElementById("story").innerHTML =
     "Our energy bar is looking a little low.<br><br>" +
-    "Let's boost that birthday spirit with our next quest ⚡✨";
+    "Let's boost that birthday spirit with our next quest!";
 
   document.getElementById("choices").innerHTML =
     "<button onclick='driftaway()'>Boost Energy</button>";
@@ -204,30 +204,30 @@ function energyLow() {
 
 function driftaway() {
   document.getElementById("story").innerHTML =
-    "Welcome to Driftaway Cafe ☕✨<br><br>" +
-    "<a href='https://www.driftaway.coffee/' target='_blank'>View the Menu ☕</a><br><br>" +
-    "Caffeine Level: MAX.<br><br>" +
-    "Next mission: Reach Xanadu Roller Arts.";
+    "Welcome to Driftaway Cafe ⋆˚𝜗𝜚˚⋆<br><br>" +
+    "<a href='https://www.driftaway.coffee/' target='_blank'>View the Menu</a><br><br>" +
+    "Caffeine Level: MAX with our Coffee Omakase⭑.ᐟ<br><br>" +
+     "Next mission: Reach <a href='https://www.xanadu.nyc/' target='_blank'>Xanadu Roller Arts</a>.";
 
   document.getElementById("choices").innerHTML =
-    "<button onclick='rollFail()'>Rollerskate There</button>" +
-    "<button onclick='teleport()'>Teleport Dramatically</button>";
+    "<button onclick='rollFail()'>Rush Through and Rollerskate</button>" +
+    "<button onclick='teleport()'>Take Your Chances and Teleport</button>";
     
 }
 
 function rollFail() {
   document.getElementById("story").innerHTML =
-    "You attempt to rollerskate through Brooklyn traffic.<br><br>" +
-    "A pigeon defeats you.<br><br>" +
-    "Try a smarter method.";
+    "You're on a roll! Let's speed through Brooklyn traffic.<br><br>" +
+    "Zoom!<br><br>" +
+    "Time to show off all your skating skills.";
   document.getElementById("choices").innerHTML =
     "<button onclick='bossLevel()'>Enter Girlfriend Boss Level</button>";
 }
 
 function teleport() {
   document.getElementById("story").innerHTML =
-    "You teleport in blue sparkles ✨<br><br>" +
-    "You arrive flawlessly at Xanadu Roller Arts.";
+    "Ehh...the technology isn't quite there yet.<br><br>" +
+    "Do you want to lose a limb?";
   document.getElementById("choices").innerHTML =
     "<button onclick='driftaway()'>Choose Again</button>";
 }
@@ -264,13 +264,14 @@ function dinner() {
   document.getElementById("story").innerHTML =
     "Final Quest: Choose Your Dinner Destination.";
   document.getElementById("choices").innerHTML =
-    "<button onclick='tabare()'>Tabare Bushwick 🇺🇾</button>" +
-    "<button onclick='fandi()'>Fandi Mata 🇮🇹</button>";
+    "<button onclick='tabare()'>Maybe food from a country we'd like to visit?</button>" +
+    "<button onclick='fandi()'>What about food inspired by a scheduled trip?</button>";
 }
 
 function tabare() {
   document.getElementById("story").innerHTML =
-    "Delicious! Let's try some flavors from Uruguay.<br><br>" +
+    "Delicious! Let's try some flavors from Uruguay.🇺🇾<br><br>" +
+     "<a href='https://www.tabarenyc.com/' target='_blank'>View the Menu⋆˚꩜｡</a><br><br>" +
     "Ready to eat by candlelight?";
   document.getElementById("choices").innerHTML =
     "<button onclick='finale()'>Reveal Birthday Cake</button>";
@@ -278,7 +279,8 @@ function tabare() {
 
 function fandi() {
   document.getElementById("story").innerHTML =
-    "Hmm...maybe next time.<br><br>" +
+    "Hmm...maybe next time.🇮🇹<br><br>" +
+    "<a href='https://www.fandimatai.com/' target='_blank'>View the Menu⋆˚꩜｡</a><br><br>" +
     "Until our next adventure!";
   document.getElementById("choices").innerHTML =
     "<button onclick='dinner()'>Choose Again</button>";
